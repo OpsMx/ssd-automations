@@ -1,0 +1,9 @@
+apiVersion: automation.opsmx.io/v1
+kind: Automation
+name: Application security overview
+description: Summarises the active security issues of one application by category and severity, and suggests where to start, with a first step for each. Read-only.
+functions: [Vulnerability response]
+personas: [Security engineer, Engineering manager]
+requests:
+  - Report the active security issues of the application {{application}}, grouped by category and severity.
+  - From that report, name the five issues to deal with first, say why each comes first, and what a first step for each would be. Do not change anything.
