@@ -1,0 +1,9 @@
+apiVersion: automation.opsmx.io/v1
+kind: Automation
+name: License report
+description: Lists the licenses used by an application's components and picks out the copyleft ones that may need a review. Read-only.
+functions: [License compliance]
+personas: [Security engineer, Developer]
+requests:
+  - Give me a license report for the application {{application}}.
+  - From that report, list the components under GPL, AGPL or LGPL licenses, with their versions. If there are none, say so. Do not change anything.

@@ -1,0 +1,10 @@
+apiVersion: automation.opsmx.io/v1
+kind: Automation
+name: Repository scan report
+description: Starts a scan of a source repository, waits for it, then reports the findings and what to fix first. It changes nothing in the repository.
+functions: [Vulnerability response]
+personas: [Developer, Security engineer]
+requests:
+  - Scan the repository {{repository}}.
+  - Show the scan results for {{repository}}, with the number of findings at each severity and the details of the critical and high ones.
+  - From those results, list the five fixes to make first and say why each one comes first. Do not change any code or raise a pull request.
